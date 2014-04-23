@@ -4887,7 +4887,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
    
                //  api.Notifications.AddAdminNotification("newponum2", newponum.ToString());
                 DateTime today = System.DateTime.Today.Date;
-                api.Notifications.AddAdminNotification("today", today.ToString());
+              //  api.Notifications.AddAdminNotification("today", today.ToString());
 
                 if (newponum == null || newponum == "")
                 {
@@ -8029,7 +8029,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                                         {
                                             name = Convert.ToString(Dfinance.Tables[0].Rows[0]["sFullname"]);
                                             email = Convert.ToString(Dfinance.Tables[0].Rows[0]["sEmail"]);
-                                            api.Notifications.AddAdminNotification("email", email.ToString());
+                                          //  api.Notifications.AddAdminNotification("email", email.ToString());
                                             //   iperson = Convert.ToInt32(Dpers.Tables[0].Rows[0]["ixPerson"]);
                                         }
 
@@ -8078,22 +8078,22 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
                                         if (sPONum_exist == "" || sPONum_exist == null)
                                         {
-                                            api.Notifications.AddAdminNotification("status1", sPONum_exist.ToString());
+                                           // api.Notifications.AddAdminNotification("status1", sPONum_exist.ToString());
                                             int PONum = 0;
                                             CSelectQuery PONumber = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                                             PONumber.AddSelect("MAX(PONumber) as PONumber");
                                             //string sWhere1 = (api.Database.PluginTableName("CGSInvoice_MLA")) + ".ixBug = " + bug.ixBug.ToString();
                                             //PONumber.AddWhere(sWhere1);
                                             DataSet Synds = PONumber.GetDataSet();
-                                            api.Notifications.AddAdminNotification("i1", "i1");
+                                         //   api.Notifications.AddAdminNotification("i1", "i1");
                                             if (null != Synds.Tables && Synds.Tables.Count == 1 && Synds.Tables[0].Rows.Count == 1)
                                             {
 
 
-                                                api.Notifications.AddAdminNotification("i2", "i2");
+                                              //  api.Notifications.AddAdminNotification("i2", "i2");
                                                 PONum = Convert.ToInt32(Convert.ToString(Synds.Tables[0].Rows[0]["PONumber"]));
                                                 int i = Convert.ToInt32(PONum) + 1;
-                                                api.Notifications.AddAdminNotification("i3", i.ToString());
+                                              //  api.Notifications.AddAdminNotification("i3", i.ToString());
                                                 bug.SetPluginField(PLUGIN_ID, "PONumber", i.ToString());
                                                 PONumb = (bug.GetPluginField(PLUGIN_ID, "PONumber")).ToString().Trim();
                                                 //  PONumb = (bug.GetPluginField(PLUGIN_ID, "PONumber")).ToString().Trim();
@@ -8533,7 +8533,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                     {
 
                         string UserStatus = (bug.GetPluginField(PLUGIN_ID, "CWFUserResolve")).ToString().Trim();
-                        api.Notifications.AddAdminNotification("statusR", UserStatus.ToString());
+                        //api.Notifications.AddAdminNotification("statusR", UserStatus.ToString());
 
                         iperson = 0;
                         // string Vendor_Name1 = "";
@@ -8892,20 +8892,20 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                                 }
                                 if (bug.ixStatus == 180)
                                 {
-                                    api.Notifications.AddAdminNotification("status1", bug.ixProject.ToString());
-                                    api.Notifications.AddAdminNotification("status2", bug.ixStatus.ToString());
+                                   // api.Notifications.AddAdminNotification("status1", bug.ixProject.ToString());
+                                   // api.Notifications.AddAdminNotification("status2", bug.ixStatus.ToString());
                                     if (bug.ixPersonResolvedBy != 299)
                                     {
-                                        api.Notifications.AddAdminNotification("ixPersonResolvedBy", bug.ixPersonResolvedBy.ToString());
+                                      //  api.Notifications.AddAdminNotification("ixPersonResolvedBy", bug.ixPersonResolvedBy.ToString());
                                         this.api.Notifications.AddMessage("The PO has been approved and sent to Finance team for review");
                                         string Finance_mailsub = "A PO has been Approved for vendor : " + vendor_1 + ", amount: $" + amt.ToString() + ", description :" + title;
                                         string Finance_mailbody = "A PO has been Approved for vendor : " + vendor_1 + ", amount: $" + amt.ToString() + ", description :" + title + ". Click on the link to review the PO information and generate Purchase Order http://empower.conseroglobal.com/default.asp?" + bug.ixBug;
                                         //  string Proc_mailbody = "The PO you submitted has been approved and new PO number " + PONumb + " has been created, accounting team will share the purchase order copy shortly.";
                                         mailsender_Finance("poornima.r@conseroglobal.com", bug, Finance_mailsub, Finance_mailbody, iperson);
                                         bug.ixStatus = 183;
-                                        api.Notifications.AddAdminNotification("status3", bug.ixProject.ToString());
+                                       // api.Notifications.AddAdminNotification("status3", bug.ixProject.ToString());
                                         bug.ixPersonAssignedTo = 299;
-                                        api.Notifications.AddAdminNotification("ixPersonResolvedBy", bug.ixPersonAssignedTo.ToString());
+                                       // api.Notifications.AddAdminNotification("ixPersonResolvedBy", bug.ixPersonAssignedTo.ToString());
                                     }
 
                                 }
@@ -8944,7 +8944,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
                                         if (sPONum_exist == "" || sPONum_exist == null)
                                         {
-                                            api.Notifications.AddAdminNotification("status1", sPONum_exist.ToString());
+                                           // api.Notifications.AddAdminNotification("status1", sPONum_exist.ToString());
                                             int PONum = 0;
                                             CSelectQuery PONumber = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                                             PONumber.AddSelect("MAX(PONumberArt) as PONumber");
@@ -8956,10 +8956,10 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                                             {
 
 
-                                                api.Notifications.AddAdminNotification("i2", "i2");
+                                               // api.Notifications.AddAdminNotification("i2", "i2");
                                                 PONum = Convert.ToInt32(Convert.ToString(Synds.Tables[0].Rows[0]["PONumber"]));
                                                 int i = Convert.ToInt32(PONum) + 1;
-                                                api.Notifications.AddAdminNotification("i3", i.ToString());
+                                               // api.Notifications.AddAdminNotification("i3", i.ToString());
                                                 bug.SetPluginField(PLUGIN_ID, "PONumberArt", i.ToString());
                                                 PONumb = (bug.GetPluginField(PLUGIN_ID, "PONumberArt")).ToString().Trim();
                                                 //  PONumb = (bug.GetPluginField(PLUGIN_ID, "PONumber")).ToString().Trim();
@@ -9383,7 +9383,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                     {
 
                         string UserStatus = (bug.GetPluginField(PLUGIN_ID, "CWFUserResolve")).ToString().Trim();
-                        api.Notifications.AddAdminNotification("statusR", UserStatus.ToString());
+                      //  api.Notifications.AddAdminNotification("statusR", UserStatus.ToString());
 
                         iperson = 0;
                         // string Vendor_Name1 = "";
@@ -9822,7 +9822,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                                         type = Convert.ToString(checkPOB.Tables[0].Rows[0]["typea718"]);
 
                                     }
-                                    api.Notifications.AddAdminNotification("type", type.ToString());
+                                 //   api.Notifications.AddAdminNotification("type", type.ToString());
                                     if (type == "General PO")
                                     {
                                         string PONumb = "";
@@ -9840,14 +9840,14 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
                                             if (sPONum_exist == "" || sPONum_exist == null)
                                             {
-                                                api.Notifications.AddAdminNotification("status1", sPONum_exist.ToString());
+                                               // api.Notifications.AddAdminNotification("status1", sPONum_exist.ToString());
                                                 int PONum = 0;
                                                 CSelectQuery PONumber = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                                                 PONumber.AddSelect("MAX(PO_Number) as PONumber");
                                                 string sWhere = (api.Database.PluginTableName("CGSInvoice_MLA")) + ".ixproject = " + bug.ixProject.ToString();
                                                 PONumber.AddWhere(sWhere);
                                                 DataSet Synds = PONumber.GetDataSet();
-                                                api.Notifications.AddAdminNotification("i1", "i1");
+                                             //   api.Notifications.AddAdminNotification("i1", "i1");
                                                 if (null != Synds.Tables && Synds.Tables.Count == 1 && Synds.Tables[0].Rows.Count == 1)
                                                 {
 
@@ -9887,14 +9887,14 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
                                             if (sBPONum_exist == "" || sBPONum_exist == null)
                                             {
-                                                api.Notifications.AddAdminNotification("status1", sBPONum_exist.ToString());
+                                               // api.Notifications.AddAdminNotification("status1", sBPONum_exist.ToString());
                                                 int PONum = 0;
                                                 CSelectQuery PONumber = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                                                 PONumber.AddSelect("MAX(B_PO_Number) as B_PONumber");
                                                 string sWhere = (api.Database.PluginTableName("CGSInvoice_MLA")) + ".ixproject = " + bug.ixProject.ToString();
                                                 PONumber.AddWhere(sWhere);
                                                 DataSet Synds = PONumber.GetDataSet();
-                                                api.Notifications.AddAdminNotification("i1", "i1");
+                                             //   api.Notifications.AddAdminNotification("i1", "i1");
                                                 if (null != Synds.Tables && Synds.Tables.Count == 1 && Synds.Tables[0].Rows.Count == 1)
                                                 {
 
@@ -10817,7 +10817,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
             catch (Exception e)
             {
                 api.Notifications.AddAdminNotification(e.ToString(), "");
-                api.Notifications.AddAdminNotification("1", "insert error");
+              //  api.Notifications.AddAdminNotification("1", "insert error");
             }
         }
 
@@ -10844,27 +10844,27 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                 object LineItemId = LineItemNo.GetScalarValue();
                 string Id = Convert.ToString(LineItemId);
               //  DataSet Synds = LineItemNo.GetDataSet();
-                api.Notifications.AddAdminNotification("ixLineItemId1", Id.ToString());
+                //api.Notifications.AddAdminNotification("ixLineItemId1", Id.ToString());
                
 
                 if (Id == "")
                // if (null == Synds.Tables)
                 {
-                    api.Notifications.AddAdminNotification("ixLineItemId3", "ixLineItemId3");
+                  //  api.Notifications.AddAdminNotification("ixLineItemId3", "ixLineItemId3");
                     insert.InsertInt("ixLineItemId", Convert.ToInt32(j.ToString()));
             
                 }
 
                 else
                 {
-                    api.Notifications.AddAdminNotification("ixLineItemId4", "ixLineItemId4");
+                   // api.Notifications.AddAdminNotification("ixLineItemId4", "ixLineItemId4");
                     LineNum = Convert.ToInt32(Id.ToString());
                     i = Convert.ToInt32(LineNum) + 1;
                     insert.InsertInt("ixLineItemId", Convert.ToInt32(i.ToString()));
                                            
                 }
                                
-                api.Notifications.AddAdminNotification("ixLineItemId", i.ToString());
+               // api.Notifications.AddAdminNotification("ixLineItemId", i.ToString());
                 CSelectQuery Qrynewpon = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                 Qrynewpon.AddSelect("Add_Fld1");
                 string sWhere2 = (api.Database.PluginTableName("CGSInvoice_MLA")) + ".ixBug = " + ixbug.ToString();
@@ -10956,20 +10956,20 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                 object LineItemId = LineItemNo.GetScalarValue();
                 string Id = Convert.ToString(LineItemId);
                 //  DataSet Synds = LineItemNo.GetDataSet();
-                api.Notifications.AddAdminNotification("ixLineItemId1", Id.ToString());
+               // api.Notifications.AddAdminNotification("ixLineItemId1", Id.ToString());
 
 
                 if (Id == "")
                 // if (null == Synds.Tables)
                 {
-                    api.Notifications.AddAdminNotification("ixLineItemId3", "ixLineItemId3");
+                    //api.Notifications.AddAdminNotification("ixLineItemId3", "ixLineItemId3");
                     insert.InsertInt("ixLineItemId", Convert.ToInt32(j.ToString()));
 
                 }
 
                 else
                 {
-                    api.Notifications.AddAdminNotification("ixLineItemId4", "ixLineItemId4");
+                    //api.Notifications.AddAdminNotification("ixLineItemId4", "ixLineItemId4");
                     LineNum = Convert.ToInt32(Id.ToString());
                     i = Convert.ToInt32(LineNum) + 1;
                     insert.InsertInt("ixLineItemId", Convert.ToInt32(i.ToString()));
@@ -11613,7 +11613,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
             int Bugid = 0;
             string i_OldCaseID1 = "";
 
-            api.Notifications.AddAdminNotification("CopyCase_Synergis", "CopyCase_Synergis");
+           // api.Notifications.AddAdminNotification("CopyCase_Synergis", "CopyCase_Synergis");
             // api.Notifications.AddAdminNotification("Raw Page display called", "");
 
             ixBug = Convert.ToInt32(api.Request[api.AddPluginPrefix("ixBug")].ToString());
@@ -11634,7 +11634,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                         //i_OldCaseID = Int32.Parse(api.Request[api.AddPluginPrefix("PONumber")].ToString());
                         i_OldCaseID1 = api.Request[api.AddPluginPrefix("PONumber")].ToString();
                         i_OldCaseID = Int32.Parse(i_OldCaseID1.Substring(6));
-                        api.Notifications.AddAdminNotification("i_OldCaseID", i_OldCaseID.ToString());
+                        //api.Notifications.AddAdminNotification("i_OldCaseID", i_OldCaseID.ToString());
 
                     }
 
@@ -11686,7 +11686,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
                         object BugId = sqlInvoiceDetails.GetScalarValue();
                         Bugid = Convert.ToInt32(BugId);
-                        api.Notifications.AddAdminNotification("Bugid", Bugid.ToString());
+                       // api.Notifications.AddAdminNotification("Bugid", Bugid.ToString());
                         sqlInvoiceDetails = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                         sqlInvoiceDetails.AddSelect("*");
                         sqlInvoiceDetails.AddWhere("ixBug =" + Bugid.ToString());
@@ -11702,7 +11702,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
                         object BugId = sqlInvoiceDetails.GetScalarValue();
                         Bugid = Convert.ToInt32(BugId);
-                        api.Notifications.AddAdminNotification("Bugid", Bugid.ToString());
+                        //api.Notifications.AddAdminNotification("Bugid", Bugid.ToString());
                         sqlInvoiceDetails = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                         sqlInvoiceDetails.AddSelect("*");
                         sqlInvoiceDetails.AddWhere("ixBug =" + Bugid.ToString());
@@ -11748,7 +11748,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
                     if (bHeaderCopy == true)
                     {
-                        api.Notifications.AddAdminNotification("Line1", "Line1");
+                        //api.Notifications.AddAdminNotification("Line1", "Line1");
                         string tablename = api.Database.PluginTableName("CGSInvoice_MLA");
                         CUpdateQuery Update1 = api.Database.NewUpdateQuery(tablename);
 
@@ -11777,14 +11777,14 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                     }
                     if (bLineItemsCopy == true)
                     {
-                        api.Notifications.AddAdminNotification("Line2", "Line2");
+                        //api.Notifications.AddAdminNotification("Line2", "Line2");
                         if ((dsLineItemsDetails != null) && (dsLineItemsDetails.Tables[0].Rows.Count > 0))
                         {
-                            api.Notifications.AddAdminNotification("Line3", "Line3");
+                           // api.Notifications.AddAdminNotification("Line3", "Line3");
                             foreach (DataRow dr in dsLineItemsDetails.Tables[0].Rows)
                             {
 
-                                api.Notifications.AddAdminNotification("Line4", "Line4");
+                               // api.Notifications.AddAdminNotification("Line4", "Line4");
                                 CInsertQuery insert1 = api.Database.NewInsertQuery(api.Database.PluginTableName("CGSInvoiceItems_MLA"));
 
                                 insert1.InsertInt("ixLineItemId", Convert.ToInt32(dr["ixLineItemId"].ToString()));
@@ -12180,7 +12180,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
         protected void CopyCase_Spreadfast()
         {
-            api.Notifications.AddAdminNotification("CopyCase_Spreadfast", "CopyCase_Spreadfast");
+           // api.Notifications.AddAdminNotification("CopyCase_Spreadfast", "CopyCase_Spreadfast");
             
             int ixBug = 0;
             int i_OldCaseID = 0;
@@ -12211,7 +12211,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                         //i_OldCaseID = Int32.Parse(api.Request[api.AddPluginPrefix("PONumber")].ToString());
                         i_OldCaseID1 = api.Request[api.AddPluginPrefix("PONumber")].ToString();
                         i_OldCaseID = Int32.Parse(i_OldCaseID1.Substring(6));
-                        api.Notifications.AddAdminNotification("i_OldCaseID", i_OldCaseID.ToString());
+                      //  api.Notifications.AddAdminNotification("i_OldCaseID", i_OldCaseID.ToString());
 
                     }
 
@@ -12252,19 +12252,19 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                     }
 
                     DataSet dsOldCaseDetails = new DataSet();
-                    api.Notifications.AddAdminNotification("projid1", iproj.ToString());
+                  //  api.Notifications.AddAdminNotification("projid1", iproj.ToString());
 
                     if (iproj == 27)
                     {
                         int projid = 27;
-                        api.Notifications.AddAdminNotification("projid2", projid.ToString());
+                      //  api.Notifications.AddAdminNotification("projid2", projid.ToString());
                    // int projid = Convert.ToInt32(bug.ixProject.ToString());
                     
                         sqlInvoiceDetails = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
                         sqlInvoiceDetails.AddSelect("max(ixBug)");
                         sqlInvoiceDetails.AddWhere("PO_Number = " + i_OldCaseID.ToString());
                         sqlInvoiceDetails.AddWhere("ixproject = 27");
-                        api.Notifications.AddAdminNotification("projid", projid.ToString());
+                      //  api.Notifications.AddAdminNotification("projid", projid.ToString());
 
                         object BugId = sqlInvoiceDetails.GetScalarValue();
                         Bugid = Convert.ToInt32(BugId);
@@ -12275,7 +12275,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                         dsOldCaseDetails = sqlInvoiceDetails.GetDataSet();
                    }
 
-                        api.Notifications.AddAdminNotification("copycase_SF", dsOldCaseDetails.ToString());
+                        //api.Notifications.AddAdminNotification("copycase_SF", dsOldCaseDetails.ToString());
 
                     if ((dsOldCaseDetails == null) || (dsOldCaseDetails.Tables[0].Rows.Count == 0))
                     {
@@ -12427,7 +12427,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                         // i_OldPO = Int32.Parse(api.Request[api.AddPluginPrefix("PONumber")].ToString());
                         i_OldCaseID1 = api.Request[api.AddPluginPrefix("PONumber")].ToString();
                         i_OldPO = Int32.Parse(i_OldCaseID1.Substring(4));
-                        api.Notifications.AddAdminNotification("i_OldPO", i_OldPO.ToString());
+                       // api.Notifications.AddAdminNotification("i_OldPO", i_OldPO.ToString());
                     }
 
 
@@ -12598,7 +12598,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
 
         protected void Blanket_Spreadfast()
         {
-            api.Notifications.AddAdminNotification("Blanket", "CopyCase_Spreadfast");
+           // api.Notifications.AddAdminNotification("Blanket", "CopyCase_Spreadfast");
 
             int ixBug = 0;
         //    int i_OldCaseID = 0;
@@ -12621,7 +12621,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                         //i_OldCaseID = Int32.Parse(api.Request[api.AddPluginPrefix("PONumber")].ToString());
                     i_OldCaseID1 = api.Request[api.AddPluginPrefix("CGSInvoice_MLA")].ToString();
                        // i_OldCaseID = Int32.Parse(i_OldCaseID1.Substring(6));
-                        api.Notifications.AddAdminNotification("i_OldCaseID", i_OldCaseID1.ToString());
+                      //  api.Notifications.AddAdminNotification("i_OldCaseID", i_OldCaseID1.ToString());
 
                  //   }
                     api.Notifications.AddMessage("Blanket2", "Blanket2");
@@ -12654,7 +12654,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                      }
 
                      DataSet dsOldCaseDetails = new DataSet();
-                     api.Notifications.AddAdminNotification("projid1", iproj.ToString());
+                    // api.Notifications.AddAdminNotification("projid1", iproj.ToString());
 
             
                   
@@ -12662,7 +12662,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                      sqlInvoiceDetails.AddSelect("max(ixBug)");
                      sqlInvoiceDetails.AddWhere("B_PO_Number = " + i_OldCaseID1.ToString());
                      sqlInvoiceDetails.AddWhere("ixproject = 27");
-                     api.Notifications.AddAdminNotification("i_OldCaseID13", i_OldCaseID1.ToString());
+                    // api.Notifications.AddAdminNotification("i_OldCaseID13", i_OldCaseID1.ToString());
 
                      object BugId = sqlInvoiceDetails.GetScalarValue();
                     int Bugid = Convert.ToInt32(BugId);
@@ -12689,7 +12689,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                      sqlInvoiceDetails.AddWhere("ixBug =" + Bugid.ToString() + " AND iDeleted = 0");
 
                     DataSet dsLineItemsDetails = sqlInvoiceDetails.GetDataSet();
-                    api.Notifications.AddAdminNotification("dsLineItemsDetails", dsLineItemsDetails.ToString());
+                   // api.Notifications.AddAdminNotification("dsLineItemsDetails", dsLineItemsDetails.ToString());
                     string s_OldProjectID = "";
 
                     CSelectQuery sq = api.Database.NewSelectQuery("bug");
@@ -12707,14 +12707,14 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                         CUpdateQuery Update1 = api.Database.NewUpdateQuery(tablename);
 
                         Update1.UpdateString("POAmt", dsOldCaseDetails.Tables[0].Rows[0]["Add_Fld2"].ToString());
-                        api.Notifications.AddAdminNotification("POAmt1", dsOldCaseDetails.Tables[0].Rows[0]["Add_Fld2"].ToString());
+                      //  api.Notifications.AddAdminNotification("POAmt1", dsOldCaseDetails.Tables[0].Rows[0]["Add_Fld2"].ToString());
                         //Update1.UpdateString("B_PO_Number", dsOldCaseDetails.Tables[0].Rows[0]["B_PO_Number"].ToString());
                         Update1.UpdateString("POBalanceAmt", dsOldCaseDetails.Tables[0].Rows[0]["POBalanceAmt"].ToString());
-                        api.Notifications.AddAdminNotification("POBalanceAmt1", dsOldCaseDetails.Tables[0].Rows[0]["POBalanceAmt"].ToString());
+                      //  api.Notifications.AddAdminNotification("POBalanceAmt1", dsOldCaseDetails.Tables[0].Rows[0]["POBalanceAmt"].ToString());
                         //Update1.UpdateString("Remarks", dsOldCaseDetails.Tables[0].Rows[0]["Remarks"].ToString());
                         Update1.AddWhere("ixBug = @ixBug");
                         Update1.SetParamInt("@ixBug", Convert.ToInt32(api.Request[api.AddPluginPrefix("ixBug")]));
-                        api.Notifications.AddAdminNotification("Currentbug", Convert.ToInt32(api.Request[api.AddPluginPrefix("ixBug")]).ToString());
+                      //  api.Notifications.AddAdminNotification("Currentbug", Convert.ToInt32(api.Request[api.AddPluginPrefix("ixBug")]).ToString());
                         Update1.Execute();
 
                         api.Notifications.AddAdminNotification("Currentbug", Convert.ToInt32(api.Request[api.AddPluginPrefix("ixBug")]).ToString());
@@ -12749,11 +12749,11 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
         {
             //string i_OldCaseID = "";
             //i_OldCaseID = api.Request[api.AddPluginPrefix("CGSInvoice_MLA")].ToString();
-            api.Notifications.AddAdminNotification("POBalanceAmt1", "POBalanceAmt1");
+           // api.Notifications.AddAdminNotification("POBalanceAmt1", "POBalanceAmt1");
             double balance_amt = 0;
             double BPO_Amt = 0;
             double BPO_Ref_Amt = 0;
-            api.Notifications.AddAdminNotification("POBalanceAmt2", "POBalanceAmt2");
+           // api.Notifications.AddAdminNotification("POBalanceAmt2", "POBalanceAmt2");
 
             //CSelectQuery BPOBlanceAmt;
             //BPOBlanceAmt = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
@@ -12764,7 +12764,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
             //BPO_Amt = Convert.ToDouble(Bpoamt);
 
 
-            api.Notifications.AddAdminNotification("Total_Amt", BPO_Amt.ToString());
+           // api.Notifications.AddAdminNotification("Total_Amt", BPO_Amt.ToString());
 
             CSelectQuery PO_TotalAmt = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoice_MLA"));
             PO_TotalAmt.AddSelect("sum(Add_Fld2)");
@@ -12774,10 +12774,10 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
             PO_TotalAmt.AddWhere(sWhere3);
             object Bamt = PO_TotalAmt.GetScalarValue();
             BPO_Ref_Amt = Convert.ToDouble(Bamt);
-            api.Notifications.AddAdminNotification("PO_Amt", BPO_Ref_Amt.ToString());
+           // api.Notifications.AddAdminNotification("PO_Amt", BPO_Ref_Amt.ToString());
            // balance_amt = (BPO_Amt) - (BPO_Ref_Amt);
             
-            api.Notifications.AddAdminNotification("POBalanceAmt", balance_amt.ToString());
+          //  api.Notifications.AddAdminNotification("POBalanceAmt", balance_amt.ToString());
             return (BPO_Ref_Amt);
         }
 
@@ -13168,7 +13168,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                         UpdateItem_POInvoice();
                         break;
                     case "delete_POInvoice":
-                        api.Notifications.AddAdminNotification("Calling", "Delete_Synergis");
+                     //   api.Notifications.AddAdminNotification("Calling", "Delete_Synergis");
                         DeleteItem_POInvoice();
                         break;
 
@@ -17745,7 +17745,7 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                 insert.InsertString("sInvoiceDate", api.Request[api.AddPluginPrefix("sInvoiceDate")].ToString());
                 //  api.Notifications.AddAdminNotification("sInvoiceDate", api.Request[api.AddPluginPrefix("sInvoiceDate")].ToString());
                 insert.InsertString("ixProject", api.Request[api.AddPluginPrefix("ixProject")].ToString());
-                api.Notifications.AddAdminNotification("sInvoiceDate", api.Request[api.AddPluginPrefix("ixProject")].ToString());
+             //   api.Notifications.AddAdminNotification("sInvoiceDate", api.Request[api.AddPluginPrefix("ixProject")].ToString());
                 insert.Execute();
 
                 CSelectQuery InvlinesumAmt = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSPOMatchedInvoice"));
@@ -17753,17 +17753,17 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                 InvlinesumAmt.AddWhere("ixBug = " + api.Request[api.AddPluginPrefix("ixBug")].ToString());
                 InvlinesumAmt.AddWhere("ixLineItemId_Inv = " + Convert.ToInt32(api.Request[api.AddPluginPrefix("ixLineItemId_Inv")]));
 
-                api.Notifications.AddAdminNotification("CGSPOMatchedInvoice", "1");
+              //  api.Notifications.AddAdminNotification("CGSPOMatchedInvoice", "1");
                 DataSet TotalInvLineAmt = InvlinesumAmt.GetDataSet();
                 double InvLineAmount = 0d;
                 double LineAmount = 0d;
                 double SubtotalAmt = 0d;
-                api.Notifications.AddAdminNotification("CGSPOMatchedInvoice2", "2");
+              //  api.Notifications.AddAdminNotification("CGSPOMatchedInvoice2", "2");
                 if (null != TotalInvLineAmt.Tables && TotalInvLineAmt.Tables.Count == 1 && TotalInvLineAmt.Tables[0].Rows.Count == 1)
                 {
-                    api.Notifications.AddAdminNotification("CGSPOMatchedInvoice3", "3");
+                   // api.Notifications.AddAdminNotification("CGSPOMatchedInvoice3", "3");
                     InvLineAmount = Convert.ToDouble(TotalInvLineAmt.Tables[0].Rows[0]["InvSumAcc"].ToString());
-                    api.Notifications.AddAdminNotification("InvLineAmount", InvLineAmount.ToString());
+                    //api.Notifications.AddAdminNotification("InvLineAmount", InvLineAmount.ToString());
                 }
 
                 CSelectQuery linesumAmt = api.Database.NewSelectQuery(api.Database.PluginTableName("CGSInvoiceItems_MLA"));
@@ -17772,12 +17772,12 @@ namespace Consero.Plugins.CGSInvoiceDetails_MLA
                 linesumAmt.AddWhere("ixLineItemId = " + Convert.ToInt32(api.Request[api.AddPluginPrefix("ixLineItemId_Inv")]));
                 DataSet TotalLineAmt = linesumAmt.GetDataSet();
 
-                api.Notifications.AddAdminNotification("CGSPOMatchedInvoice5", "5");
+              //  api.Notifications.AddAdminNotification("CGSPOMatchedInvoice5", "5");
                 if (null != TotalLineAmt.Tables && TotalLineAmt.Tables.Count == 1 && TotalLineAmt.Tables[0].Rows.Count == 1)
                 {
-                    api.Notifications.AddAdminNotification("CGSPOMatchedInvoice6", "6");
+                   // api.Notifications.AddAdminNotification("CGSPOMatchedInvoice6", "6");
                     LineAmount = Convert.ToDouble(TotalLineAmt.Tables[0].Rows[0]["LineSumAmt"].ToString());
-                    api.Notifications.AddAdminNotification("LineAmount", LineAmount.ToString());
+                 //   api.Notifications.AddAdminNotification("LineAmount", LineAmount.ToString());
                 }
 
                 SubtotalAmt = (LineAmount) - (InvLineAmount);

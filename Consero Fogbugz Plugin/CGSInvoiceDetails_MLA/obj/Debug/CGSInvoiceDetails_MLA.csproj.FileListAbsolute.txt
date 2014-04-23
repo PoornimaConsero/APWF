@@ -300,3 +300,43 @@ D:\INLIVE\MLA\12.21.13.backup\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Util.pdb
 D:\INLIVE\MLA\12.21.13.backup\CGSInvoiceDetails_MLA\obj\Debug\CGSInvoiceDetails_MLA.csprojResolveAssemblyReference.cache
 D:\INLIVE\MLA\12.21.13.backup\CGSInvoiceDetails_MLA\obj\Debug\CGSInvoiceDetails_MLA.dll
 D:\INLIVE\MLA\12.21.13.backup\CGSInvoiceDetails_MLA\obj\Debug\CGSInvoiceDetails_MLA.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\CGSInvoiceDetails_MLA.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\CGSInvoiceDetails_MLA.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Runtime.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Licensing.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.DateTime.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.HtmlParser.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Ionic.Utils.Zip.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\SourceSafe.Interop.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Search.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.DiffPatch.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Ferret.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Utilities.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.AppDomainTools.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Interop.ADOX.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Interop.ADODB.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Mail.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Util.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\HtmlAgilityPack.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Irony.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogBugz.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogBugz.xml
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Database.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Plugins.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Plugins.xml
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Runtime.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Runtime.xml
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Licensing.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.DateTime.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.HtmlParser.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Ionic.Utils.Zip.xml
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Search.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.DiffPatch.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Ferret.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.Utilities.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\FogCreek.AppDomainTools.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Mail.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\bin\Debug\Wasabi.Util.pdb
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\obj\Debug\CGSInvoiceDetails_MLA.csprojResolveAssemblyReference.cache
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\obj\Debug\CGSInvoiceDetails_MLA.dll
+C:\Users\pramalingappa\Documents\GitHub\Consero-APWF\APWF\Consero Fogbugz Plugin\CGSInvoiceDetails_MLA\obj\Debug\CGSInvoiceDetails_MLA.pdb
